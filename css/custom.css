@@ -1,0 +1,74 @@
+@CHARSET "UTF-8"
+
+@font-face{
+	font-family: ChosunM;
+	src: url('../fonts/ChosunM.woff') format('woff'),
+		 url('../fonts/ChosunM.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html, body {
+	font-family: 'ChosunM', 조선명조, 나눔고딕;
+	color: #4E5259;
+	background: #FAFAFA;
+}
+
+a.itemLink { text-decoration: none;}
+
+footer {
+    color: #888;
+    text-align: center;
+    border-top: 1px solid rgba(160, 160, 160, 0.2);
+}
+footer a {
+	color: #888;
+}
+
+#menu {
+	background: #2A2924;
+}
+
+#menu a {
+	color: #BCBCB3;
+}
+
+#menu .pure-menu-heading {
+	background: #345391;
+}
+
+[item] {
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  position: relative;
+  overflow: hidden;
+  margin: 8px 0 16px 0;
+  background: #FFF;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  color: #272727;
+  border-radius: 2px;
+}
+[item] .title {
+  line-height: 48px;
+  font-size: 15px;
+  font-weight: 300;
+}
+[item] .content {
+  padding: 20px;
+  font-weight: 300;
+  border-radius: 0 0 2px 2px;
+  margin: 0 0 0 0;
+}
+[item] .action {
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  padding: 20px;
+}
+[item] a {
+  color: #ffab40;
+  margin-right: 20px;
+  -webkit-transition: color 0.3s ease;
+          transition: color 0.3s ease;
+  text-transform: uppercase;
+  text-decoration: none;
+}

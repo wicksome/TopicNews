@@ -1,0 +1,147 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="news topic">
+
+	<title>News Topic &ndash; using Pure</title>
+
+	<!-------------------------------------->
+	<!-- pure -->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+	<!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+    <![endif]-->
+	<!--[if gt IE 8]><!-->
+	<link rel="stylesheet" href="css/layouts/side-menu.css">
+	<!--<![endif]-->
+	<!-------------------------------------->
+
+	<!-------------------------------------->
+	<!-- font-awesome -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<!-------------------------------------->
+
+	<!-------------------------------------->
+	<!-- javascript, jquery CDN -->
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<!-------------------------------------->
+
+	<!-------------------------------------->
+	<!-- custom js, css -->
+	<script type="text/javascript" src="js/rsslinks.js"></script>
+	<script type="text/javascript" src="js/feedRss.js"></script>
+
+	<link rel="stylesheet" href="css/custom.css">
+	<!-------------------------------------->
+
+
+	<script type="text/javascript">
+	// 높이에 맞게 리사이즈 되는 부분
+	function autoResize(i)
+	{
+		var iframeHeight=
+		(i).contentWindow.document.body.scrollHeight;
+		(i).height=iframeHeight+20;
+	}
+
+	$(window).resize(function() {
+		var height = $(window).height();
+		$('html').height(height);
+		$('body').height(height);
+//		$('#layout').height(height);
+		$('#main_frame').height(height);
+		console.log("resize: " + height);
+	});
+
+	</script>
+
+	<style type="text/css">
+		html, body {height:100%; }
+		body { min-height:100%; overflow:hidden;}
+		#main_frame { min-height:100%; }
+
+	</style>
+</head>
+<body>
+	<!-- 전체 레이아웃 -->
+	<div id="layout">
+		<!-- nav -->
+		<nav>
+			<!-- Menu toggle -->
+			<a href="#menu" id="menuLink" class="menu-link">
+				<!-- Hamburger icon -->
+				<span></span>
+			</a>
+
+			<div id="menu">
+				<div class="pure-menu">
+					<a class="pure-menu-heading" href="./index.html">TOPIC NEWS</a>
+					<!-- 전체 뉴스, 인기, 정치, 경제, 국제, 스포츠, 축구, 야구, 사회, IT, 과학, 연예 -->
+					<ul class="pure-menu-list" style="text-align:left">
+						<li class="pure-menu-item" onclick="movePage(-1)">
+							<a class="pure-menu-link "><i class="fa fa-home"></i> About</a>
+						</li>
+						<li class="pure-menu-item" onclick="movePage(0)">
+							<a class="pure-menu-link"><i class="fa fa-tasks"></i> 전체</a>
+						</li>
+						<li class="pure-menu-item" onclick="movePage(1)">
+							<a class="pure-menu-link"><i class="fa fa-info-circle"></i> 인기</a>
+						</li>
+						<li class="pure-menu-item" onclick="movePage(2)">
+							<a class="pure-menu-link"><i class="fa fa-university"></i> 정치</a>
+						</li>
+						<li class="pure-menu-item" onclick="movePage(3)">
+							<a class="pure-menu-link"><i class="fa fa-line-chart"></i> 경제</a>
+						</li>
+						<li class="pure-menu-item" onclick="movePage(4)">
+							<a class="pure-menu-link"><i class="fa fa-globe"></i> 국제</a>
+						</li>
+						<li class="pure-menu-item" onclick="movePage(5)">
+							<a class="pure-menu-link"><i class="fa fa-flag-checkered"></i> 스포츠</a>
+						</li>
+						<li class="pure-menu-item" onclick="movePage(6)">
+							<a class="pure-menu-link"><i class="fa fa-futbol-o"></i> 축구</a>
+						</li>
+						<li class="pure-menu-item" onclick="movePage(7)">
+							<a class="pure-menu-link"><i class="fa fa-wifi"></i> 야구</a>
+						</li>
+						<li class="pure-menu-item" onclick="movePage(8)">
+							<a class="pure-menu-link"><i class="fa fa-newspaper-o"></i> 사회</a>
+						</li>
+						<li class="pure-menu-item" onclick="movePage(9)">
+							<a class="pure-menu-link"><i class="fa fa-laptop"></i> IT</a>
+						</li>
+						<li class="pure-menu-item" onclick="movePage(10)">
+							<a class="pure-menu-link"><i class="fa fa-flask"></i> 과학</a>
+						</li>
+						<li class="pure-menu-item" onclick="movePage(11)">
+							<a class="pure-menu-link"><i class="fa fa-microphone"></i> 연예</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- nav -->
+
+		<!-- iframe -->
+		<div style="overflow:auto;-webkit-overflow-scrolling:touch">
+    	<iframe src="about.html" frameborder="0" width="100%" scrolling="yes" onload="autoResize(this)" id="main_frame"></iframe>
+		</div>
+
+
+	</div>
+	<!-- 전체 레이아웃 끝-->
+
+	<script src="js/ui.js"></script>
+</body>
+</html>
