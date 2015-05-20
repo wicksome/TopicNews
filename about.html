@@ -46,13 +46,27 @@
 
 </head>
 <body>
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.3";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
+
+
+
+
 	<div id="main">
 			<!-- header -->
 		<header class="header">
 			<!--  <div class="header"> -->
-			<h1>Topic News</h1>
-			<h2>카테고리별로 뉴스의 기사만 보여주는 사이트</h2>
-			<h2>It shows titles that </h2>
+			<h1>TopicNews</h1>
+			<h2>제목부터 보는 뉴스</h2>
 			<!--</div>-->
 		</header>
 		<!-- header -->
@@ -61,21 +75,28 @@
 		<article class="content">
 			<h2 class="content-subhead"><i class="fa fa-quote-left"></i> About</h2>
 			<p>
-				TOPIC NEWS는 각종 매체의 RSS를 이용하여 자료를 수집하지 않으며, 실시간으로 기사(article)의 아웃링크만을 제공합니다. 즉, 기사 내용은 해당 매체 사이트로 이동하여 보실 수 있습니다.
-			</p>
-			<p>
-				TOPIC NEWS의 모든 기사는 RSS에 의해 결정된 것입니다. 각 기사글의 저작권은 해당 매체에 있으며, 저작권법 및 국제조약의 보호를 받습니다. 또한, 각 기사글에 대한 법률적 책임은 각 매체 또는 저자에게 있으며 TOPIC NEWS의 입장과 다를 수 있습니다.
+				&nbsp TopicNews는 여러 매체들의 <strong>기사(article) 제목과 아웃링크만을 제공하는 사이트</strong>입니다. RSS(Rich Site Summary)를 이용하기 때문에 실시간 기사를 제공하며, 데이터 수집을 하지않습니다. 그러므로 각 기사글의 저작원은 해당 매체에 있으며, 저작권법 및 국제조약의 보호를 받습니다. 또한, 각 기사글에 대한 법률적 책임은 각 매체 또는 저자에게 있으며 TopicNews의 입장과 다를 수 있습니다.
 			</p>
 		</article>
 
 		<article class="content">
-			<h2 class="content-subhead"><i class="fa fa-quote-left"></i> Contact</h2>
+			<div id="sharebox">
+				<div class="fb-like" data-href="http://kyz1018.dothome.co.kr/web/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" ></div>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-via="_opid" data-hashtags="news" >Tweet</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</div>
+		</article>
+
+	<!--
+		<article class="content">
+			<h2 class="content-subhead"><i class="fa fa-quote-left"></i> Press</h2>
 			<div>
 				<p>
 					연락
 				</p>
 			</div>
 		</article>
+	-->
 	</div>
 
 	<!-- footer -->
@@ -87,8 +108,8 @@
 			<a href="mailto:opid911@gmail.com"><i class="fa fa-envelope-o"></i></a>
 			<a href="http://blog.opid.kr" target="_blank"><i class="fa fa-home"></i></a>
 			<a href="https://www.facebook.com/yeongjun.kim.140" target="_blank"><i class="fa fa-facebook-official"></i></a>
-			<a href="http://blog.opid.kr" target="_blank"><i class="fa fa-twitter-square"></i></a>
-			<a href="http://blog.opid.kr" target="_blank"><i class="fa fa-github"></i></a>
+			<a href="https://twitter.com/_opid" target="_blank"><i class="fa fa-twitter-square"></i></a>
+			<a href="https://github.com/Etdot/TopicNews" target="_blank"><i class="fa fa-github"></i></a>
 		</div>
 	</footer>
 	<!-- footer -->

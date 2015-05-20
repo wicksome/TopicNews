@@ -73,6 +73,18 @@
 	</style>
 </head>
 <body>
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.3";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
+
 	<!-- 전체 레이아웃 -->
 	<div id="layout">
 		<!-- nav -->
@@ -91,7 +103,7 @@
 						<li class="pure-menu-item" onclick="movePage(-1)">
 							<a class="pure-menu-link "><i class="fa fa-home"></i> About</a>
 						</li>
-						<li class="pure-menu-item" onclick="movePage(0)">
+						<li class="pure-menu-item menu-item-divided" onclick="movePage(0)">
 							<a class="pure-menu-link"><i class="fa fa-tasks"></i> 전체</a>
 						</li>
 						<li class="pure-menu-item" onclick="movePage(1)">
@@ -126,6 +138,9 @@
 						</li>
 						<li class="pure-menu-item" onclick="movePage(11)">
 							<a class="pure-menu-link"><i class="fa fa-microphone"></i> 연예</a>
+						</li>
+						<li class=" menu-item-divided">
+							<!-- 임시 -->
 						</li>
 					</ul>
 				</div>

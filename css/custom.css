@@ -1,5 +1,5 @@
 @CHARSET "UTF-8"
-
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 @font-face{
 	font-family: ChosunM;
 	src: url('../fonts/ChosunM.woff') format('woff'),
@@ -9,17 +9,16 @@
 }
 
 html, body {
-	font-family: 'ChosunM', 조선명조, 나눔고딕;
+	font-family: 'ChosunM', 'Nanum Gothic';
 	color: #4E5259;
 	background: #FAFAFA;
 }
-
-a.itemLink { text-decoration: none;}
 
 footer {
     color: #888;
     text-align: center;
     border-top: 1px solid rgba(160, 160, 160, 0.2);
+    padding-bottom: 30px;
 }
 footer a {
 	color: #888;
@@ -36,6 +35,35 @@ footer a {
 #menu .pure-menu-heading {
 	background: #345391;
 }
+
+/* 기사 하나하나 폰트 지정 */
+.pure-g [class *="pure-u"] {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+a .itemLink { text-decoration: none;}
+#category {
+	color: #2A2924;
+	font-weight:bold;
+}
+
+#sns {
+	position: relative;
+	min-height: 0px;
+}
+#sns_content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+
+
+
+
+
+
+
 
 [item] {
   display: inline-block;
