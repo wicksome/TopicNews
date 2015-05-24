@@ -38,32 +38,36 @@
 
 	<!-------------------------------------->
 	<!-- custom js, css -->
+	<link rel="stylesheet" href="css/brick-by-brick.css" />
+	<link rel="stylesheet" href="css/custom.css"/>
+
 	<script type="text/javascript" src="js/rsslinks.js"></script>
 	<script type="text/javascript" src="js/feedRss.js"></script>
+	<script src="js/brick-by-brick.js"></script>
 
-	<link rel="stylesheet" href="css/custom.css">
 	<!-------------------------------------->
 	<script type="text/javascript">
 		var categoryName = new Array("전체 뉴스",
 			"인기", "정치", "경제", "국제", "스포츠", "축구",
 			"야구", "사회", "IT", "과학", "연예");
 		 // main
-		$(document)
-			.ready(function () {
-				// 카테고리 식별자
-				var val = location.href.substr(
-					location.href.lastIndexOf('=') +
-					1
-				);
+		$(document).ready(function () {
+			// 카테고리 식별자
+			var val = location.href.substr(location.href.lastIndexOf('=') + 1);
 				// 각 페이지 타이틀 정의
-				$("#category").html(categoryName[
-					val].toString());
-				//console.log('value : ' + val);
-				//console.log('document.ready() : ' + rssArray[val]);
-				$("#pageitem").addRssDatas(rssArray[val]);
-				//addRssDatas(rssArray[val]);
-			});
+			$("#category").html(categoryName[val].toString());
+			//console.log('value : ' + val);
+			//console.log('document.ready() : ' + rssArray[val]);
+			$("#layout-item").addRssDatas(rssArray[val]);
+			//addRssDatas(rssArray[val]);
+		
+		});
+
+		$(window).load(function() {
+			$('#layout-item').layout(); 
+		});
 	</script>
+
 
 
 </head>
@@ -76,7 +80,8 @@
 			<h2 id="category">category</h2>
 		</header>
 		<section class="content">
-			<div class="pure-g" id="pageitem">loading news list...</div>
+			<!--<div class="pure-g" id="pageitem">loading news list...</div>-->
+			<div id="layout-item">loading news list...</div>
 		</section>
 	</article>
 

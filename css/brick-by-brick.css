@@ -1,0 +1,25 @@
+/*
+Copyright © 2015 S. William & A.M. Pritchard
+Licensed Under MIT
+*/
+#layout-item .b-by-b-item {
+  background-color: #333;
+  color: #fff;
+  width: 33.33%;
+}
+#layout-item.no-grid .b-by-b-item {
+  width: 100%!important;
+}
+.single-column .b-by-b-item {
+  width: 100%!important;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  #layout-item .b-by-b-item {
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  #layout-item .b-by-b-item {
+    width: 50%;
+  }
+}

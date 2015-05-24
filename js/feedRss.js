@@ -89,27 +89,41 @@ function getRandomArray(idxSize, range) {
 					indexs.forEach(function(value) {
 						console.log("index : " + value);
 						var item = rssList[value];
-
-						s += '<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">';
-						s += '<div item>'
-						s += '<div class="content">';
-						// s += '<div class="content 1-box">';
-						s += '<span class="title">';
+						s += '<section item>'
+						s += ' <div class="date">'
+						s += '  <p>' + item.pubDate + '</p>';
+						s += ' </div>'
+						s += ' <div class="content">'
+						s += '  <div class="title">'
 						s += item.title;
-						s += '</span>';
-						s += '<p></p>'
-						s += '</div>';
+						s += '  </div>'
+						s += ' </div>'
+						s += ' <div class="action">'
+						s += '  <a href="'+ item.link + '" target="_blank">';
+						s += '해당 기사로 이동 <i class="fa fa-external-link"></i>';
+						s += '  </a>';
+						s += ' </div>'
+						s += '</section>'
+
+			//			s += '<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">';
+			//			s += '<div item>'
+			//			s += '<div class="content">';
+			//			s += '<span class="title">';
+			//			s += item.title;
+			//			s += '</span>';
+			//			s += '<p></p>'
+			//			s += '</div>';
 						//s += '<p>';
 						//s += item.content;
 						//s += '</p>';
 						//s += '<a href="'+ item.link + '" class="itemLink" target="_blank" ">';
-						s += '<div class="action">'
-						s += '<a href="'+ item.link + '" target="_blank">';
-						s += '해당 기사로 이동';
-						s += '</a>';
-						s += '</div>';
-						s += '</div>';
-						s += '</div>';
+			//			s += '<div class="action">'
+			//			s += '<a href="'+ item.link + '" target="_blank">';
+			//			s += '해당 기사로 이동';
+			//			s += '</a>';
+			//			s += '</div>';
+			//			s += '</div>';
+			//			s += '</div>';
 						//s += '<p>' + item.pubDate + '</p>';
 
 						/*

@@ -72,25 +72,34 @@ a .itemLink { text-decoration: none;}
   position: relative;
   overflow: hidden;
   margin: 8px 0 16px 0;
-  background: #FFF;
+  background: #FFF !important;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  color: #272727;
+  color: #272727 !important;
   border-radius: 2px;
+}
+[item] .date {
+/*  border-bottom: 1px solid rgba(160, 160, 160, 0.2);*/
+  padding: 0 0 0 10px;
+  margin: 10px 0 0 0;
+}
+[item] .date p {
+  font-size: 12px;
+  margin: 0 0 0 0;
+}
+[item] .content {
+  padding: 10px;
+  font-weight: 300;
+  border-radius: 0 0 2px 2px;
+  margin: 0 0 0 0;
 }
 [item] .title {
   line-height: 48px;
   font-size: 15px;
   font-weight: 300;
 }
-[item] .content {
-  padding: 20px;
-  font-weight: 300;
-  border-radius: 0 0 2px 2px;
-  margin: 0 0 0 0;
-}
 [item] .action {
   border-top: 1px solid rgba(160, 160, 160, 0.2);
-  padding: 20px;
+  padding: 10px;
 }
 [item] a {
   color: #ffab40;
