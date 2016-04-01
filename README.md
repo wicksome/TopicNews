@@ -1,5 +1,5 @@
 # <center>TOPIC NEWS <small>[[link]][1]</small></center>
-[1]: http://etdot.github.io/project/NewsTopic/
+[1]: http://5pid.github.io/project/NewsTopic/
 
 ## WHAT?
 
